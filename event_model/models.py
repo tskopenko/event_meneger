@@ -3,9 +3,10 @@ from user.models import User
 from django.db.models.functions import Now
 from location_field.models.plain import PlainLocationField
 
+
 class Event(models.Model):
     title = models.CharField(max_length=255, null=False)
-    description = models.CharField(max_length=255)
+    description = models.CharField(max_length=255, blank=True)
     date = models.DateField(db_default=Now())
     city = models.CharField(max_length=255)
     location = PlainLocationField(based_fields=['city'])
@@ -14,6 +15,6 @@ class Event(models.Model):
     class Meta:
         verbose_name_plural = 'events'
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'Event: {self.title} at {self.date} at {self.location} was created!'
 

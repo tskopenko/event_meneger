@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'user',
     'event_model',
+    'rest_framework',
     'location_field.apps.DefaultConfig',
 ]
 
