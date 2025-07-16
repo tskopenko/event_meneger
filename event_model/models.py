@@ -16,5 +16,5 @@ class Event(models.Model):
         verbose_name_plural = 'events'
 
     def __str__(self) -> str:
-        return f'Event: {self.title} at {self.date} at {self.location} was created!'
+        return f'Event: {self.title} at {self.date} at {self.location}'
 
