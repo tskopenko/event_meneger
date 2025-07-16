@@ -18,3 +18,11 @@ class Event(models.Model):
     def __str__(self) -> str:
         return f'Event: {self.title} at {self.date} at {self.location}'
 
+
+class EventRegistration(models.Model):
+    event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name="registrations")
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="event_registrations")
+    registered_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ("event", "user")
