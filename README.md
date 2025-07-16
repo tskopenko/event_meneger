@@ -101,4 +101,4 @@ This application is created for **AIDA Recruitment** as part of a technical test
 
 ## Additional Information
 
-As per the test assignment requirements, a PDF file with instructions is included (see `/docs/Python_Test.pdf`).
+As per the test assignment requirements, a PDF file with instructions is included (see `Python_Test.pdf`).
